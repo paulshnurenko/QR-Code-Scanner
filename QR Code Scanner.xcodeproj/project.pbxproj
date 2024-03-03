@@ -11,6 +11,7 @@
 		AF48E0D52B94BEC600FC6A6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48E0D42B94BEC600FC6A6D /* ContentView.swift */; };
 		AF48E0D72B94BEC800FC6A6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF48E0D62B94BEC800FC6A6D /* Assets.xcassets */; };
 		AF48E0DA2B94BEC800FC6A6D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF48E0D92B94BEC800FC6A6D /* Preview Assets.xcassets */; };
+		AF48E0E22B94C01D00FC6A6D /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = AF48E0E12B94C01D00FC6A6D /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF48E0E22B94C01D00FC6A6D /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = "QR Code Scanner";
+			packageProductDependencies = (
+				AF48E0E12B94C01D00FC6A6D /* CodeScanner */,
+			);
 			productName = "QR Code Scanner";
 			productReference = AF48E0CF2B94BEC600FC6A6D /* QR Code Scanner.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = AF48E0C62B94BEC600FC6A6D;
+			packageReferences = (
+				AF48E0E02B94C01D00FC6A6D /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = AF48E0D02B94BEC600FC6A6D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -274,11 +282,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"QR Code Scanner/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera to scan QR codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,11 +312,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"QR Code Scanner/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera to scan QR codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -342,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF48E0E02B94C01D00FC6A6D /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF48E0E12B94C01D00FC6A6D /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF48E0E02B94C01D00FC6A6D /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF48E0C72B94BEC600FC6A6D /* Project object */;
 }
